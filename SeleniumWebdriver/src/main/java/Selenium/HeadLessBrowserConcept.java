@@ -1,7 +1,6 @@
 package Selenium;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
@@ -15,7 +14,9 @@ public class HeadLessBrowserConcept {
 	public static void main(String[] args) {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
+		
 		//WebDriver driver = new HtmlUnitDriver();
+		
 		driver.get("https://signin.ebay.com/ws/eBayISAPI.dll?SignIn&sgfl=gh&ru=https%3A%2F%2Fwww.ebay.com%2F");
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
